@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Perangkat Pembelajaran Informatika Kelas X (Fase E) — Deep Learning & KBC</title>
+  <meta name="description" content="Landing page dan portal digital perangkat pembelajaran Mata Pelajaran Informatika Kelas 10 (Fase E) Kurikulum Merdeka berbasis Deep Learning & Kurikulum Berbasis Cinta (KBC) lengkap dengan Preview Google Drive dan Download." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom subtle grid background & scrollbar */
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image:
+        linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.35);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.6);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden -z-10">
+    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-indigo-500/15 dark:bg-indigo-500/10 blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 rounded-full bg-violet-500/15 dark:bg-violet-500/10 blur-3xl"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/10 blur-3xl"></div>
+    <div class="absolute inset-0 bg-grid-pattern"></div>
+  </div>
+
+  <!-- ================= NAVBAR STICKY ================= -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+          <i data-lucide="terminal" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white">
+              INFORMATIKA <span class="text-indigo-600 dark:text-indigo-400">FASE E</span>
+            </span>
+            <span class="hidden sm:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+              KELAS X • KBC
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1" data-bind-school>
+            MA Mu'allimin NW Anjani
+          </p>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#beranda" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Beranda</a>
+        <a href="#pendekatan-kbc" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Deep Learning & KBC</a>
+        <a href="#peta-materi" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Peta 9 Bab</a>
+        <a href="#katalog-perangkat" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Katalog Dokumen (26)</a>
+        <a href="#profil-guru" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Profil Guru</a>
+        <a href="./profil-guru.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 hover:bg-indigo-600 hover:text-white transition-all">
+          <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+          <span>Halaman Identitas Guru</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <button
+          onclick="window.PortalApp.openDriveManager()"
+          class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border border-indigo-500/20 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white transition-all"
+          title="Atur Tautan Google Drive"
+        >
+          <i data-lucide="cloud-cog" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Kelola Link Drive</span>
+        </button>
+
+        <a
+          href="#katalog-perangkat"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-400 dark:hover:text-white transition-all shadow-sm"
+        >
+          <i data-lucide="folder-down" class="w-4 h-4"></i>
+          <span>Unduh Perangkat</span>
+        </a>
+
+        <button
+          onclick="window.PortalApp.toggleTheme()"
+          class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200/80 dark:border-slate-800 transition-colors"
+          aria-label="Ganti Tema Terang/Gelap"
+          title="Ganti Mode Gelap / Terang"
+        >
+          <i data-lucide="sun-moon" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="beranda" class="relative pt-10 pb-16 sm:pt-16 sm:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Headline & CTA -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-300 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+            <span>Kurikulum Merdeka • Deep Learning & Kurikulum Berbasis Cinta (KBC)</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+            Portal Digital Perangkat Pembelajaran <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-400">Informatika Kelas X</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+            Pusat repositori perangkat ajar terpadu <strong>Fase E (Kelas 10 SMA/MA)</strong> yang memuat Administrasi Kurikulum (CP, ATP, Analisis Minggu Efektif, PROTA, PROMES, KKTP, Jurnal), <strong>9 Modul Ajar Deep Learning (KBC)</strong>, <strong>9 LKPD Praktikum Siswa</strong>, dan Buku Teks Utama dengan fitur <strong>Live Preview Google Drive</strong> & unduhan instan.
+          </p>
+
+          <!-- Identity Card Banner with Photo -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <a href="./profil-guru.html" class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-indigo-500/40 shrink-0 group">
+                <img src="./assets/foto-guru.png" alt="Muhammad Azmi, M.Kom" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+              </a>
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Guru Pengampu Mata Pelajaran:</p>
+                <a href="./profil-guru.html" class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" data-bind-teacher>Muhammad Azmi, M.Kom</a>
+                <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium" data-bind-school>MA Mu'allimin NW Anjani</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 sm:border-l border-slate-200 dark:border-slate-800 sm:pl-4">
+              <a
+                href="./profil-guru.html"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border border-indigo-500/20 hover:bg-indigo-600 hover:text-white transition-all"
+              >
+                <i data-lucide="id-card" class="w-3.5 h-3.5"></i>
+                <span>Profil Lengkap Guru</span>
+              </a>
+              <span id="drive-linked-badge" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                26 Dokumen Siap Akses
+              </span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <a
+              href="#katalog-perangkat"
+              class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl text-sm font-bold bg-indigo-600 text-white hover:bg-indigo-500 shadow-xl shadow-indigo-600/25 hover:-translate-y-0.5 transition-all"
+            >
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>Jelajahi & Preview 26 Dokumen</span>
+            </a>
+
+            <button
+              onclick="window.PortalApp.openPreview('adm-ame')"
+              class="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-2xl text-sm font-bold bg-white dark:bg-slate-900 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 hover:-translate-y-0.5 transition-all shadow-sm"
+            >
+              <i data-lucide="calendar-check-2" class="w-4 h-4 text-indigo-500"></i>
+              <span>Analisis Minggu Efektif</span>
+            </button>
+
+            <a
+              href="#"
+              data-bind-drive-folder
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-3.5 rounded-2xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>Buka Folder Google Drive</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Dashboard Preview Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-7 shadow-2xl">
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 text-xs font-mono text-slate-400">informatika_kelas_10_kbc.repo</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                Fase E • Lengkap
+              </span>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 gap-3.5 mb-5">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Total Perangkat</span>
+                  <i data-lucide="files" class="w-4 h-4 text-indigo-500"></i>
+                </div>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white">26 File</p>
+                <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">25 DOCX + 1 PDF Buku</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Cakupan Materi</span>
+                  <i data-lucide="cpu" class="w-4 h-4 text-violet-500"></i>
+                </div>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white">9 Bab</p>
+                <p class="text-[11px] text-violet-600 dark:text-violet-400 font-medium mt-0.5">Ganjil (5) & Genap (4)</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Alokasi Waktu</span>
+                  <i data-lucide="clock" class="w-4 h-4 text-sky-500"></i>
+                </div>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white">108 JP</p>
+                <p class="text-[11px] text-sky-600 dark:text-sky-400 font-medium mt-0.5">12 JP / Bab (36 Pekan)</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Fitur Akses</span>
+                  <i data-lucide="cloud-download" class="w-4 h-4 text-emerald-500"></i>
+                </div>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white">2 Mode</p>
+                <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">Drive Preview & Unduh</p>
+              </div>
+            </div>
+
+            <!-- Quick Access Pill List -->
+            <div class="space-y-2.5">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Akses Cepat Dokumen Utama:</p>
+              
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 hover:border-indigo-500/40 transition-all">
+                <div class="flex items-center gap-3">
+                  <span class="px-2 py-1 rounded-md text-[10px] font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">CP & ATP</span>
+                  <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Capaian & Alur Tujuan Pembelajaran</span>
+                </div>
+                <button onclick="window.PortalApp.openPreview('adm-cp')" class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+                  Preview →
+                </button>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 hover:border-indigo-500/40 transition-all">
+                <div class="flex items-center gap-3">
+                  <span class="px-2 py-1 rounded-md text-[10px] font-bold bg-violet-500/10 text-violet-600 dark:text-violet-400">MODUL</span>
+                  <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Modul Ajar Deep Learning (Bab 1–9)</span>
+                </div>
+                <button onclick="window.PortalApp.openPreview('modul-bab2')" class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+                  Preview →
+                </button>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 hover:border-indigo-500/40 transition-all">
+                <div class="flex items-center gap-3">
+                  <span class="px-2 py-1 rounded-md text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">LKPD</span>
+                  <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Lembar Kerja Peserta Didik (LKPD 1–9)</span>
+                </div>
+                <button onclick="window.PortalApp.openPreview('lkpd-bab2')" class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+                  Preview →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: PENDEKATAN DEEP LEARNING & KBC ================= -->
+  <section id="pendekatan-kbc" class="py-14 sm:py-20 border-y border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
+          Paradigma Pembelajaran
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-3 mb-3">
+          Sinergi <span class="text-indigo-600 dark:text-indigo-400">Deep Learning</span> & Kurikulum Berbasis Cinta (KBC)
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Seluruh perangkat pembelajaran dalam portal ini dirancang untuk menghadirkan pengalaman belajar Informatika yang melatih nalar kritis sekaligus menumbuhkan karakter mulia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pillar 1 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Mindful Learning</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Peserta didik belajar dengan kesadaran penuh akan tujuan setiap konsep komputasi—mengapa algoritma, struktur data, dan jaringan penting bagi kehidupan.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Meaningful Learning</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Mengaitkan konsep abstrak Informatika (seperti Stack, Queue, Enkripsi, dan Analisis Data) dengan permasalahan kontekstual di lingkungan sekolah/madrasah.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Joyful & Unplugged</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Pembelajaran yang menyenangkan melalui permainan logika, simulasi kartu pengurutan (sorting), diskusi interaktif, serta eksperimen coding kolaboratif.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Kurikulum Berbasis Cinta</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Menanamkan cinta kepada Tuhan, cinta ilmu pengetahuan, empati dalam kerja kelompok, serta etika digital yang santun dan bebas perundungan siber.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: PETA MATERI 9 BAB INFORMATIKA ================= -->
+  <section id="peta-materi" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+            Struktur Kurikulum Fase E
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-3">
+            Peta Materi 9 Bab Informatika Kelas X
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+            Setiap bab dilengkapi dengan <strong>Modul Ajar Deep Learning (KBC)</strong> dan <strong>Lembar Kerja Peserta Didik (LKPD)</strong> yang dapat langsung di-preview maupun diunduh.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-semibold">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
+            <span class="w-2 h-2 rounded-full bg-sky-500"></span> Semester Ganjil: Bab 1 – Bab 5
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Semester Genap: Bab 6 – Bab 9
+          </span>
+        </div>
+      </div>
+
+      <!-- Dynamic 9 Chapters Bento Grid -->
+      <div id="elements-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: KATALOG & EXPLORER PERANGKAT PEMBELAJARAN ================= -->
+  <section id="katalog-perangkat" class="py-16 sm:py-24 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            Repositori Lengkap • Google Drive Ready
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-3">
+            Katalog Perangkat Pembelajaran
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-1.5">
+            Pilih dokumen untuk melihat <strong>Preview Google Drive / Struktur Isi</strong> atau klik <strong>Download</strong> untuk mengunduh file.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button
+            onclick="window.PortalApp.openDriveManager()"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 hover:text-white transition-all shadow-sm"
+          >
+            <i data-lucide="link-2" class="w-4 h-4"></i>
+            <span>Tautkan / Kelola Link Google Drive</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter & Search Control Bar -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm mb-8 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              data-filter-cat="all"
+              onclick="window.PortalApp.setCategory('all')"
+              class="px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 text-white shadow-sm shadow-indigo-600/20 transition-all"
+            >
+              Semua Dokumen (26)
+            </button>
+            <button
+              data-filter-cat="administrasi"
+              onclick="window.PortalApp.setCategory('administrasi')"
+              class="px-4 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/40 transition-all"
+            >
+              Administrasi & Buku (8)
+            </button>
+            <button
+              data-filter-cat="modul"
+              onclick="window.PortalApp.setCategory('modul')"
+              class="px-4 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/40 transition-all"
+            >
+              Modul Ajar KBC (9)
+            </button>
+            <button
+              data-filter-cat="lkpd"
+              onclick="window.PortalApp.setCategory('lkpd')"
+              class="px-4 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/40 transition-all"
+            >
+              LKPD Siswa (9)
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative flex-1 max-w-md">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Cari modul, LKPD, CP, ATP, algoritma, jaringan... (Ctrl+K)"
+              class="w-full pl-10 pr-16 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+            />
+            <span class="hidden sm:inline-block absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-300">
+              Ctrl+K
+            </span>
+          </div>
+        </div>
+
+        <!-- Sub-bar: Semester Filter & View Switcher -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="text-xs font-semibold text-slate-400 mr-1">Filter Semester:</span>
+            <button
+              data-filter-sem="all"
+              onclick="window.PortalApp.setSemester('all')"
+              class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-all"
+            >
+              Semua
+            </button>
+            <button
+              data-filter-sem="Tahunan"
+              onclick="window.PortalApp.setSemester('Tahunan')"
+              class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all"
+            >
+              Tahunan / Umum
+            </button>
+            <button
+              data-filter-sem="Ganjil"
+              onclick="window.PortalApp.setSemester('Ganjil')"
+              class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all"
+            >
+              Semester Ganjil (Bab 1–5)
+            </button>
+            <button
+              data-filter-sem="Genap"
+              onclick="window.PortalApp.setSemester('Genap')"
+              class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all"
+            >
+              Semester Genap (Bab 6–9)
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span id="results-count" class="text-xs font-medium text-slate-500 dark:text-slate-400">
+              Menampilkan 26 dari 26 dokumen
+            </span>
+            <div class="flex items-center gap-1 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700">
+              <button
+                id="view-btn-grid"
+                onclick="window.PortalApp.setViewMode('grid')"
+                class="p-2 rounded-lg bg-indigo-600 text-white transition-all"
+                title="Tampilan Grid"
+              >
+                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+              </button>
+              <button
+                id="view-btn-list"
+                onclick="window.PortalApp.setViewMode('list')"
+                class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all"
+                title="Tampilan Daftar"
+              >
+                <i data-lucide="list" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Documents Container -->
+      <div id="documents-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION: EXPLORER FOLDER GOOGLE DRIVE LANGSUNG ================= -->
+  <section id="panduan-drive" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 text-white p-6 sm:p-10 border border-indigo-500/30 shadow-2xl relative overflow-hidden space-y-8">
+        
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+              Terhubung Langsung ke Google Drive (26 File Aktif)
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+              Explorer Folder Google Drive — Perangkat Informatika Fase E
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+              Seluruh 26 dokumen pada katalog di atas telah terhubung langsung dengan ID file masing-masing di Google Drive. Anda juga dapat menjelajahi isi folder Google Drive secara langsung melalui panel interaktif di bawah ini:
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="https://drive.google.com/drive/folders/1meWNWgbjzBF8E-3-wXeyYxUy8Evsgyi-?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-xs font-bold bg-indigo-500 hover:bg-indigo-400 text-white shadow-lg shadow-indigo-500/25 transition-all"
+            >
+              <i data-lucide="folder-open" class="w-4 h-4"></i>
+              <span>Buka Folder Utama di Google Drive</span>
+            </a>
+            <button
+              onclick="window.PortalApp.openDriveManager()"
+              class="inline-flex items-center gap-2 px-4 py-3 rounded-2xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all"
+            >
+              <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
+              <span>Kelola Link (26 File)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Selector Subfolder Google Drive -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/10">
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              data-drive-folder-tab="modul"
+              onclick="window.PortalApp.switchDriveFolderEmbed('modul', null)"
+              class="px-4 py-2.5 rounded-xl text-xs font-bold bg-indigo-500 text-white shadow-lg shadow-indigo-500/25 transition-all flex items-center gap-2"
+            >
+              <i data-lucide="folder" class="w-4 h-4"></i>
+              <span>Folder INFORMATIKA 10 (Modul & Adm)</span>
+            </button>
+            <button
+              data-drive-folder-tab="lkpd"
+              onclick="window.PortalApp.switchDriveFolderEmbed('lkpd', null)"
+              class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-white/10 text-slate-200 hover:bg-white/20 border border-white/10 transition-all flex items-center gap-2"
+            >
+              <i data-lucide="folder" class="w-4 h-4"></i>
+              <span>Folder LKPD INFORMATIKA 10 (LKPD 1–9)</span>
+            </button>
+            <button
+              data-drive-folder-tab="main"
+              onclick="window.PortalApp.switchDriveFolderEmbed('main', null)"
+              class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-white/10 text-slate-200 hover:bg-white/20 border border-white/10 transition-all flex items-center gap-2"
+            >
+              <i data-lucide="folders" class="w-4 h-4"></i>
+              <span>Folder Induk (PERANGKAT INFORMATIKA FASE E)</span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <div class="flex items-center p-1 rounded-xl bg-white/10 border border-white/10">
+              <button
+                data-drive-folder-view="list"
+                onclick="window.PortalApp.switchDriveFolderEmbed(null, 'list')"
+                class="px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-500 text-white transition-all"
+              >
+                List
+              </button>
+              <button
+                data-drive-folder-view="grid"
+                onclick="window.PortalApp.switchDriveFolderEmbed(null, 'grid')"
+                class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white transition-all"
+              >
+                Grid
+              </button>
+            </div>
+            <a
+              id="embedded-drive-folder-open"
+              href="https://drive.google.com/drive/folders/1kqveQcK5QfzSRkFZsNhuAK-ZpgGgXb8t?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-indigo-200 border border-white/10 transition-all"
+            >
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>Buka Tab Baru</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Google Drive Folder View Iframe -->
+        <div class="rounded-2xl overflow-hidden border border-white/15 bg-white shadow-inner">
+          <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-xs text-slate-700">
+            <span id="embedded-drive-folder-title" class="font-bold">INFORMATIKA 10 (Administrasi, Modul Ajar & Buku)</span>
+            <span class="text-[11px] text-slate-500">Google Drive Embedded View</span>
+          </div>
+          <iframe
+            id="embedded-drive-folder-iframe"
+            src="https://drive.google.com/embeddedfolderview?id=1kqveQcK5QfzSRkFZsNhuAK-ZpgGgXb8t#list"
+            class="w-full h-[380px] border-0 bg-white"
+            title="Google Drive Folder Explorer"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: IDENTITAS GURU PENGAMPU MATA PELAJARAN ================= -->
+  <section id="profil-guru" class="py-16 sm:py-24 bg-white/70 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+            Profil Penyusun & Pendidik
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-3">
+            Identitas Guru Pengampu Mata Pelajaran
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-1.5">
+            Profil resmi pendidik penyusun perangkat pembelajaran Informatika Kelas X (Fase E) Kurikulum Merdeka & KBC.
+          </p>
+        </div>
+
+        <a
+          href="./profil-guru.html"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500 shadow-lg shadow-indigo-600/25 transition-all self-start md:self-auto"
+        >
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>Buka Halaman Penuh Identitas Guru</span>
+        </a>
+      </div>
+
+      <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-10 shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          
+          <!-- Photo Showcase -->
+          <div class="lg:col-span-4 flex flex-col items-center text-center">
+            <div class="relative group">
+              <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-amber-400 via-indigo-500 to-violet-600 opacity-75 blur-sm group-hover:opacity-100 transition duration-500"></div>
+              <div class="relative w-52 h-64 sm:w-60 sm:h-72 rounded-3xl overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 border-4 border-white dark:border-slate-900 shadow-2xl">
+                <img
+                  src="./assets/foto-guru.png"
+                  alt="Muhammad Azmi, M.Kom — Guru Pengampu Informatika"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold shadow-lg whitespace-nowrap flex items-center gap-1.5">
+                <i data-lucide="badge-check" class="w-3.5 h-3.5 text-amber-300"></i>
+                <span>Guru Pengampu Informatika</span>
+              </span>
+            </div>
+
+            <h3 class="mt-6 text-xl font-extrabold text-slate-900 dark:text-white" data-bind-teacher>
+              Muhammad Azmi, M.Kom
+            </h3>
+            <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">
+              Magister Komputer (M.Kom)
+            </p>
+            <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400" data-bind-school>
+              MA Mu'allimin NW Anjani
+            </p>
+          </div>
+
+          <!-- Detailed Identity Table & Bio -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+              <p class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1.5">
+                Tentang Guru Pengampu
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Pendidik dan praktisi di bidang Informatika dan Ilmu Komputer yang berfokus pada transformasi pembelajaran digital di lingkungan madrasah. Mengintegrasikan pendekatan <strong>Deep Learning (Mindful, Meaningful, Joyful Learning)</strong> dengan nilai-nilai <strong>Kurikulum Berbasis Cinta (KBC)</strong> untuk mencetak peserta didik Fase E yang cakap berpikir komputasional, terampil berteknologi, dan berakhlak mulia.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                <p class="text-[11px] text-slate-400">Nama Lengkap & Gelar</p>
+                <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5" data-bind-teacher>Muhammad Azmi, M.Kom</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                <p class="text-[11px] text-slate-400">Satuan Pendidikan / Instansi</p>
+                <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5" data-bind-school>MA Mu'allimin NW Anjani</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                <p class="text-[11px] text-slate-400">Mata Pelajaran & Kelas/Fase</p>
+                <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">Informatika — Kelas X / Fase E</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                <p class="text-[11px] text-slate-400">Kualifikasi & Bidang Keahlian</p>
+                <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">S2 Magister Komputer (Ilmu Komputer)</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-100 dark:border-slate-800">
+              <p class="text-xs italic text-slate-500 dark:text-slate-400">
+                "Mendidik dengan Cinta, Membekali Generasi Madrasah dengan Logika Komputasi & Akhlakul Karimah."
+              </p>
+              <a
+                href="./profil-guru.html"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white transition-all"
+              >
+                <i data-lucide="user-round" class="w-4 h-4"></i>
+                <span>Lihat & Cetak Halaman Biodata Guru →</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-200/80 dark:border-slate-800/80 py-10 bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
+          <i data-lucide="terminal" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <p class="font-bold text-slate-900 dark:text-white">Portal Perangkat Pembelajaran Informatika Kelas X (Fase E)</p>
+          <p><span data-bind-school>MA Mu'allimin NW Anjani</span> • Penyusun: <span data-bind-teacher>Muhammad Azmi, M.Kom</span></p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#beranda" class="hover:text-indigo-500 transition-colors">Atas ↑</a>
+        <span>•</span>
+        <span>Kurikulum Merdeka (Deep Learning & KBC)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL 1: PREVIEW DOKUMEN (GOOGLE DRIVE + ISI) ================= -->
+  <div
+    id="preview-modal"
+    class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="relative w-full max-w-5xl rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 border-b border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/70 dark:bg-slate-900/60">
+        <div>
+          <div id="modal-doc-meta" class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-1.5"></div>
+          <h3 id="modal-doc-title" class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+            Judul Dokumen
+          </h3>
+        </div>
+
+        <div class="flex items-center gap-2 self-start sm:self-center shrink-0">
+          <!-- Mode Switcher Tabs -->
+          <div class="flex items-center p-1 rounded-2xl bg-slate-200/70 dark:bg-slate-800 border border-slate-300/60 dark:border-slate-700">
+            <button
+              id="tab-btn-drive"
+              onclick="window.PortalApp.switchModalTab('drive')"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 text-white shadow-sm transition-all"
+            >
+              <i data-lucide="cloud" class="w-3.5 h-3.5"></i>
+              <span>Preview Dokumen</span>
+            </button>
+            <button
+              id="tab-btn-content"
+              onclick="window.PortalApp.switchModalTab('content')"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+            >
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+              <span>Ringkasan & Isi</span>
+            </button>
+          </div>
+
+          <button
+            onclick="window.PortalApp.closePreview()"
+            class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-rose-500 transition-colors"
+            title="Tutup (Esc)"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="modal-doc-body" class="p-4 sm:p-6 overflow-y-auto flex-1"></div>
+
+      <!-- Modal Footer -->
+      <div id="modal-doc-footer" class="p-4 sm:p-5 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/90"></div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 2: PENGELOLA TAUTAN GOOGLE DRIVE ================= -->
+  <div
+    id="drive-manager-modal"
+    class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="relative w-full max-w-4xl rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Header -->
+      <div class="p-5 sm:p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-indigo-600 text-white flex items-center justify-center">
+            <i data-lucide="cloud-cog" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Pengelola Tautan Google Drive & Identitas</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Tempelkan link bagikan Google Drive untuk mengaktifkan <em>Live Embed Preview</em> & <em>Direct Download</em>.
+            </p>
+          </div>
+        </div>
+        <button
+          onclick="window.PortalApp.closeDriveManager()"
+          class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-rose-500"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1">
+        <!-- Identitas & Folder Utama -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-indigo-500/5 border border-indigo-500/20">
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
+              Nama Sekolah / Madrasah
+            </label>
+            <input
+              id="manager-school-name"
+              type="text"
+              class="w-full px-3 py-2 rounded-xl text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
+            />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
+              Nama Guru Penyusun
+            </label>
+            <input
+              id="manager-teacher-name"
+              type="text"
+              class="w-full px-3 py-2 rounded-xl text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
+            />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
+              URL Folder Utama Google Drive
+            </label>
+            <input
+              id="manager-folder-url"
+              type="text"
+              placeholder="https://drive.google.com/drive/folders/..."
+              class="w-full px-3 py-2 rounded-xl text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700"
+            />
+          </div>
+        </div>
+
+        <!-- Daftar 25 Dokumen -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+            Tautan Google Drive Per Dokumen (25 File)
+          </h4>
+          <div id="manager-links-list" class="space-y-2.5"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="p-4 sm:p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <button
+            onclick="window.PortalApp.exportConfigJson()"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-indigo-500"
+          >
+            <i data-lucide="download" class="w-4 h-4 text-indigo-500"></i>
+            <span>Ekspor JSON</span>
+          </button>
+          <label class="cursor-pointer inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-indigo-500">
+            <i data-lucide="upload" class="w-4 h-4 text-emerald-500"></i>
+            <span>Impor JSON</span>
+            <input type="file" accept=".json" class="hidden" onchange="window.PortalApp.importConfigJson(event)" />
+          </label>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button
+            onclick="window.PortalApp.closeDriveManager()"
+            class="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            Batal
+          </button>
+          <button
+            onclick="window.PortalApp.saveAllDriveLinks()"
+            class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500 shadow-lg shadow-indigo-600/20"
+          >
+            <i data-lucide="save" class="w-4 h-4"></i>
+            <span>Simpan Perubahan</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>
+
+  <!-- Scripts -->
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

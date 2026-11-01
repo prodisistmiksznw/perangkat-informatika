@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Guru Pengampu — Muhammad Azmi, M.Kom | Informatika Kelas X (Fase E)</title>
+  <meta name="description" content="Halaman Identitas Resmi Guru Pengampu Mata Pelajaran Informatika Kelas X (Fase E) MA Mu'allimin NW Anjani — Muhammad Azmi, M.Kom." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image:
+        linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden -z-10 no-print">
+    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-indigo-500/15 dark:bg-indigo-500/10 blur-3xl"></div>
+    <div class="absolute top-1/4 -right-40 w-96 h-96 rounded-full bg-amber-500/15 dark:bg-amber-500/10 blur-3xl"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 rounded-full bg-violet-500/10 dark:bg-violet-500/10 blur-3xl"></div>
+    <div class="absolute inset-0 bg-grid-pattern"></div>
+  </div>
+
+  <!-- ================= NAVBAR STICKY ================= -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="./index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+          <i data-lucide="terminal" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white">
+              INFORMATIKA <span class="text-indigo-600 dark:text-indigo-400">FASE E</span>
+            </span>
+            <span class="hidden sm:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+              KELAS X • KBC
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1" data-bind-school>
+            MA Mu'allimin NW Anjani
+          </p>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-300">
+        <a href="./index.html#beranda" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Beranda</a>
+        <a href="./index.html#peta-materi" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Peta 9 Bab</a>
+        <a href="./index.html#katalog-perangkat" class="px-3.5 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Katalog Dokumen (25)</a>
+        <a href="./profil-guru.html" class="px-3.5 py-2 rounded-xl bg-indigo-600 text-white shadow-sm shadow-indigo-600/20">Identitas Guru Pengampu</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <a
+          href="./index.html"
+          class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-500/40 transition-all"
+        >
+          <i data-lucide="arrow-left" class="w-4 h-4 text-indigo-500"></i>
+          <span>Kembali ke Katalog</span>
+        </a>
+
+        <button
+          onclick="openEditProfileModal()"
+          class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border border-indigo-500/20 hover:bg-indigo-600 hover:text-white transition-all"
+        >
+          <i data-lucide="user-pen" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Edit Biodata</span>
+        </button>
+
+        <button
+          onclick="window.print()"
+          class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-400 dark:hover:text-white transition-all"
+          title="Cetak Halaman Identitas Guru"
+        >
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>Cetak Profil</span>
+        </button>
+
+        <button
+          onclick="togglePageTheme()"
+          class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200/80 dark:border-slate-800 transition-colors"
+          title="Ganti Mode Gelap / Terang"
+        >
+          <i data-lucide="sun-moon" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT: HALAMAN IDENTITAS GURU PENGAMPU ================= -->
+  <main class="py-10 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <!-- Top Breadcrumb & Title Banner -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-bold mb-2">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Profil & Identitas Penyusun Perangkat Pembelajaran</span>
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Identitas Guru Pengampu Mata Pelajaran
+          </h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Aktif Mengajar • TP <span id="prof-academic-year">2025/2026</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ================= HERO PROFILE CARD ================= -->
+      <div class="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xl overflow-hidden">
+        <!-- Decorative Top Banner -->
+        <div class="h-32 sm:h-40 bg-gradient-to-r from-indigo-700 via-violet-700 to-amber-500 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div class="absolute bottom-4 right-6 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/40 backdrop-blur-md text-white text-xs font-semibold border border-white/15">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i>
+            <span>Kurikulum Merdeka • Deep Learning & KBC</span>
+          </div>
+        </div>
+
+        <div class="px-6 sm:px-10 pb-8 sm:pb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Column: Photo Frame & Quick Badges -->
+            <div class="lg:col-span-4 -mt-16 sm:-mt-20 flex flex-col items-center text-center">
+              <div class="relative group">
+                <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-amber-400 via-indigo-500 to-violet-600 opacity-80 blur-sm group-hover:opacity-100 transition duration-500"></div>
+                <div class="relative w-48 h-60 sm:w-56 sm:h-72 rounded-3xl overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 border-4 border-white dark:border-slate-900 shadow-2xl">
+                  <img
+                    id="prof-photo"
+                    src="./assets/foto-guru.png"
+                    alt="Muhammad Azmi, M.Kom — Guru Pengampu Informatika"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold shadow-lg whitespace-nowrap flex items-center gap-1.5">
+                  <i data-lucide="badge-check" class="w-3.5 h-3.5 text-amber-300"></i>
+                  <span>Pendidik Tersertifikasi</span>
+                </div>
+              </div>
+
+              <h2 id="prof-name" class="mt-6 text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                Muhammad Azmi, M.Kom
+              </h2>
+              <p id="prof-title" class="text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">
+                Guru Pengampu Mata Pelajaran Informatika
+              </p>
+              <p id="prof-school-badge" class="mt-2 px-3.5 py-1 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                MA Mu'allimin NW Anjani
+              </p>
+
+              <!-- Quick Action Links under photo -->
+              <div class="w-full grid grid-cols-2 gap-2.5 mt-6 pt-5 border-t border-slate-100 dark:border-slate-800 no-print">
+                <a
+                  href="./index.html#katalog-perangkat"
+                  class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition-all"
+                >
+                  <i data-lucide="folder-open" class="w-3.5 h-3.5"></i>
+                  <span>26 Perangkat</span>
+                </a>
+                <a
+                  id="prof-drive-btn"
+                  href="https://drive.google.com/drive/folders/1meWNWgbjzBF8E-3-wXeyYxUy8Evsgyi-?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 transition-all"
+                >
+                  <i data-lucide="cloud" class="w-3.5 h-3.5 text-indigo-500"></i>
+                  <span>Google Drive</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Structured Identity Details -->
+            <div class="lg:col-span-8 pt-2 lg:pt-6 space-y-6">
+              
+              <!-- Bio Summary Box -->
+              <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2 flex items-center gap-2">
+                  <i data-lucide="user-check" class="w-4 h-4"></i>
+                  Profil Singkat Pengampu
+                </h3>
+                <p id="prof-bio" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Pendidik dan praktisi di bidang Informatika dan Ilmu Komputer yang berfokus pada transformasi pembelajaran digital di lingkungan madrasah. Mengintegrasikan pendekatan Deep Learning (Mindful, Meaningful, Joyful Learning) dengan nilai-nilai Kurikulum Berbasis Cinta (KBC) untuk mencetak peserta didik Fase E yang cakap berpikir komputasional, terampil berteknologi, dan beretika luhur.
+                </p>
+              </div>
+
+              <!-- Structured Data Grid (Biodata Resmi) -->
+              <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3 flex items-center gap-2">
+                  <i data-lucide="id-card" class="w-4 h-4 text-indigo-500"></i>
+                  Data Administrasi & Tugas Mengajar
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="user" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Nama Lengkap & Gelar Akademik</p>
+                      <p id="prof-grid-name" class="text-sm font-bold text-slate-900 dark:text-white">Muhammad Azmi, M.Kom</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Kualifikasi Pendidikan</p>
+                      <p id="prof-degree" class="text-sm font-bold text-slate-900 dark:text-white">S2 — Magister Komputer (M.Kom)</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="building-2" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Satuan Pendidikan / Madrasah</p>
+                      <p id="prof-school" class="text-sm font-bold text-slate-900 dark:text-white">MA Mu'allimin NW Anjani</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="cpu" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Mata Pelajaran & Fase</p>
+                      <p class="text-sm font-bold text-slate-900 dark:text-white">Informatika — Kelas X (Fase E)</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="calendar-clock" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Alokasi Jam & Semester</p>
+                      <p class="text-sm font-bold text-slate-900 dark:text-white">108 JP / Tahun (Ganjil & Genap)</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-400">Lokasi Madrasah</p>
+                      <p id="prof-location" class="text-sm font-bold text-slate-900 dark:text-white">Anjani, Lombok Timur, NTB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Motto Pendidikan -->
+              <div class="p-5 rounded-2xl bg-gradient-to-r from-indigo-600/10 via-violet-600/10 to-amber-500/10 border border-indigo-500/20 flex items-start gap-4">
+                <i data-lucide="quote" class="w-8 h-8 text-indigo-500 shrink-0 mt-0.5"></i>
+                <div>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">
+                    Motto & Filosofi Mengajar (Kurikulum Berbasis Cinta)
+                  </p>
+                  <p id="prof-motto" class="text-sm sm:text-base font-semibold italic text-slate-800 dark:text-slate-200">
+                    "Mendidik dengan Cinta, Membekali Generasi Madrasah dengan Logika Komputasi, Kreativitas Digital, dan Akhlakul Karimah."
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= KOMPETENSI & BIDANG KEAHLIAN + PORTOFOLIO PERANGKAT ================= -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left 5 Cols: Bidang Keahlian -->
+        <div class="lg:col-span-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Bidang Keahlian & Fokus Materi</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Kompetensi Inti Pengajaran Informatika</p>
+            </div>
+          </div>
+
+          <div class="space-y-3.5 pt-2">
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Berpikir Komputasional & Algoritma Pemrograman</span>
+                <span class="text-indigo-600 dark:text-indigo-400">Bab 2 & Bab 7</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-600 to-violet-500 rounded-full w-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Jaringan Komputer, Internet & Sistem Komputer</span>
+                <span class="text-sky-600 dark:text-sky-400">Bab 4 & Bab 5</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full w-11/12"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Analisis Data & Pemrograman Python (Colab)</span>
+                <span class="text-amber-600 dark:text-amber-400">Bab 6</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-500 to-orange-400 rounded-full w-11/12"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Integrasi Aplikasi Perkantoran & Cloud TIK</span>
+                <span class="text-emerald-600 dark:text-emerald-400">Bab 1 & Bab 3</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full w-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1.5">
+                <span>Etika Siber, Dampak Sosial & Proyek Lintas Bidang</span>
+                <span class="text-rose-600 dark:text-rose-400">Bab 8 & Bab 9</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full w-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 7 Cols: Ringkasan Karya Perangkat Pembelajaran -->
+        <div class="lg:col-span-7 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-5">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                  <i data-lucide="folder-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Portofolio Perangkat Ajar yang Disusun</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Terintegrasi Google Drive & Siap Digunakan</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-lg text-xs font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                Total 26 Dokumen
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">8 Dokumen</span>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-2">Perencanaan & Adm</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                  CP, ATP, Analisis Minggu Efektif, PROTA, PROMES, KKTP, Jurnal, dan Buku Teks.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-violet-500/10 text-violet-600 dark:text-violet-400">9 Modul Ajar</span>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-2">Modul Deep Learning</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                  Modul Ajar KBC Bab 1 s/d Bab 9 lengkap dengan langkah pembelajaran & asesmen.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">9 LKPD Siswa</span>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-2">Lembar Kerja Praktik</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                  LKPD kolaboratif, simulasi algoritma unplugged, praktikum Office, Colab, & Coding.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 no-print">
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Ingin melihat pratinjau atau mengunduh perangkat di atas?
+            </p>
+            <a
+              href="./index.html#katalog-perangkat"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition-all"
+            >
+              <span>Buka Katalog Perangkat Pembelajaran</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= MODAL EDIT BIODATA GURU ================= -->
+  <div
+    id="edit-profile-modal"
+    class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4 no-print"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="relative w-full max-w-lg rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden">
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Edit Biodata Guru Pengampu</h3>
+        <button onclick="closeEditProfileModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-500">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-5 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Nama Lengkap & Gelar</label>
+          <input id="inp-prof-name" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Jabatan / Tugas Mengajar</label>
+          <input id="inp-prof-title" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Nama Madrasah / Sekolah</label>
+            <input id="inp-prof-school" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Kualifikasi Pendidikan</label>
+            <input id="inp-prof-degree" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Lokasi Madrasah</label>
+            <input id="inp-prof-location" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Tahun Pelajaran</label>
+            <input id="inp-prof-year" type="text" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Motto Mengajar</label>
+          <textarea id="inp-prof-motto" rows="2" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Deskripsi Profil Singkat</label>
+          <textarea id="inp-prof-bio" rows="3" class="w-full px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700"></textarea>
+        </div>
+      </div>
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex justify-end gap-2">
+        <button onclick="closeEditProfileModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-500">Batal</button>
+        <button onclick="saveProfileChanges()" class="px-5 py-2 rounded-xl text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-500">Simpan Biodata</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-200/80 dark:border-slate-800/80 py-8 bg-white dark:bg-slate-950 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <p>Portal Perangkat Pembelajaran Informatika Kelas X • <strong>MA Mu'allimin NW Anjani</strong></p>
+      <a href="./index.html" class="font-bold text-indigo-600 dark:text-indigo-400 hover:underline">← Kembali ke Halaman Utama</a>
+    </div>
+  </footer>
+
+  <script src="./data.js"></script>
+  <script>
+    const STORAGE_KEY_CONFIG = "perangkat_informatika_kbc_config_v2";
+    const STORAGE_KEY_THEME = "perangkat_informatika_kbc_theme_v1";
+
+    function getProfileConfig() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY_CONFIG);
+        if (saved) return { ...window.DEFAULT_CONFIG, ...JSON.parse(saved) };
+      } catch (e) {}
+      return { ...window.DEFAULT_CONFIG };
+    }
+
+    function renderProfilePage() {
+      const cfg = getProfileConfig();
+      document.getElementById("prof-name").textContent = cfg.teacherName;
+      document.getElementById("prof-grid-name").textContent = cfg.teacherName;
+      document.getElementById("prof-title").textContent = cfg.teacherTitle || "Guru Pengampu Mata Pelajaran Informatika";
+      document.getElementById("prof-school-badge").textContent = cfg.schoolName;
+      document.getElementById("prof-school").textContent = cfg.schoolName;
+      document.getElementById("prof-degree").textContent = cfg.teacherDegree || "Magister Komputer (M.Kom)";
+      document.getElementById("prof-location").textContent = cfg.teacherLocation || "Anjani, Lombok Timur, NTB";
+      document.getElementById("prof-academic-year").textContent = cfg.academicYear || "2025/2026";
+      document.getElementById("prof-motto").textContent = `"${cfg.teacherMotto || window.DEFAULT_CONFIG.teacherMotto}"`;
+      document.getElementById("prof-bio").textContent = cfg.teacherBio || window.DEFAULT_CONFIG.teacherBio;
+      document.querySelectorAll("[data-bind-school]").forEach((el) => (el.textContent = cfg.schoolName));
+      if (cfg.driveFolderUrl) {
+        document.getElementById("prof-drive-btn").href = cfg.driveFolderUrl;
+      }
+    }
+
+    function openEditProfileModal() {
+      const cfg = getProfileConfig();
+      document.getElementById("inp-prof-name").value = cfg.teacherName || "";
+      document.getElementById("inp-prof-title").value = cfg.teacherTitle || "";
+      document.getElementById("inp-prof-school").value = cfg.schoolName || "";
+      document.getElementById("inp-prof-degree").value = cfg.teacherDegree || "";
+      document.getElementById("inp-prof-location").value = cfg.teacherLocation || "";
+      document.getElementById("inp-prof-year").value = cfg.academicYear || "";
+      document.getElementById("inp-prof-motto").value = cfg.teacherMotto || "";
+      document.getElementById("inp-prof-bio").value = cfg.teacherBio || "";
+      document.getElementById("edit-profile-modal").classList.remove("hidden");
+    }
+
+    function closeEditProfileModal() {
+      document.getElementById("edit-profile-modal").classList.add("hidden");
+    }
+
+    function saveProfileChanges() {
+      const cfg = getProfileConfig();
+      cfg.teacherName = document.getElementById("inp-prof-name").value.trim() || cfg.teacherName;
+      cfg.teacherTitle = document.getElementById("inp-prof-title").value.trim() || cfg.teacherTitle;
+      cfg.schoolName = document.getElementById("inp-prof-school").value.trim() || cfg.schoolName;
+      cfg.teacherDegree = document.getElementById("inp-prof-degree").value.trim() || cfg.teacherDegree;
+      cfg.teacherLocation = document.getElementById("inp-prof-location").value.trim() || cfg.teacherLocation;
+      cfg.academicYear = document.getElementById("inp-prof-year").value.trim() || cfg.academicYear;
+      cfg.teacherMotto = document.getElementById("inp-prof-motto").value.trim() || cfg.teacherMotto;
+      cfg.teacherBio = document.getElementById("inp-prof-bio").value.trim() || cfg.teacherBio;
+
+      localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(cfg));
+      renderProfilePage();
+      closeEditProfileModal();
+    }
+
+    function togglePageTheme() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem(STORAGE_KEY_THEME, isDark ? "dark" : "light");
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
+      if (savedTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      renderProfilePage();
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
+
